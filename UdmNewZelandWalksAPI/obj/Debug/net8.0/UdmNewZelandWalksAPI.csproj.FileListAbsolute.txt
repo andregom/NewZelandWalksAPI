@@ -139,3 +139,5 @@ C:\Users\andre\source\repos\UdmNewZelandWalksAPI\UdmNewZelandWalksAPI\obj\Debug\
 C:\Users\andre\source\repos\UdmNewZelandWalksAPI\UdmNewZelandWalksAPI\obj\Debug\net8.0\UdmNewZelandWalksAPI.pdb
 C:\Users\andre\source\repos\UdmNewZelandWalksAPI\UdmNewZelandWalksAPI\obj\Debug\net8.0\UdmNewZelandWalksAPI.genruntimeconfig.cache
 C:\Users\andre\source\repos\UdmNewZelandWalksAPI\UdmNewZelandWalksAPI\obj\Debug\net8.0\ref\UdmNewZelandWalksAPI.dll
+C:\Users\andre\source\repos\UdmNewZelandWalksAPI\UdmNewZelandWalksAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\andre\source\repos\UdmNewZelandWalksAPI\UdmNewZelandWalksAPI\obj\Debug\net8.0\UdmNewZelandWalksAPI.sourcelink.json

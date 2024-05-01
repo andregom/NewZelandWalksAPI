@@ -6,6 +6,7 @@ using UdmNewZelandWalksAPI.Models.DTO;
 
 using UdmNewZelandWalksAPI.Database;
 using UdmNewZelandWalksAPI.Repositories;
+using AutoMapper;
 
 namespace UdmNewZelandWalksAPI.Controllers
 {
@@ -15,10 +16,15 @@ namespace UdmNewZelandWalksAPI.Controllers
     {
         private readonly NZWalksDbContext dbContext;
         private readonly IRegionRepository regionRepository;
-        public RegionsController(NZWalksDbContext dbContext, IRegionRepository regionRepository)
+        private readonly IMapper mapper;
+
+        public RegionsController(NZWalksDbContext dbContext, IRegionRepository regionRepository,
+            IMapper mapper)
         {
             this.dbContext = dbContext;
-            this.regionRepository = regionRepository; ;
+            this.regionRepository = regionRepository;
+            this.mapper = mapper;
+            ;
         }
 
         /*
@@ -30,44 +36,19 @@ namespace UdmNewZelandWalksAPI.Controllers
         {
             var regionsDomain = await regionRepository.GetAllAsync();
 
-            var regionsDto = new List<RegionDto>();
-            foreach (var regionDomain in regionsDomain)
-            {
-                regionsDto.Add(new RegionDto
-                {
-                    Id = regionDomain.Id,
-                    Code = regionDomain.Code,
-                    Name = regionDomain.Name,
-                    RegionImageUrl = regionDomain.RegionImageUrl
-                });
-            }
-
-            return Ok(regionsDto);
+            return Ok(mapper.Map<List<RegionDto>>(regionsDomain));
         }
 
         [HttpGet]
         [Route("{id:Guid}")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
-
             var regionDomain = await regionRepository.GetByIdAsync(id);
 
-
             if (regionDomain == null)
-            {
                 return NotFound();
-            }
 
-            var regionDto = new RegionDto
-            {
-                Id = regionDomain.Id,
-                Code = regionDomain.Code,
-                Name = regionDomain.Name,
-                RegionImageUrl = regionDomain.RegionImageUrl
-            };
-
-            return Ok(regionDto);
-
+            return Ok(mapper.Map<RegionDto>(regionDomain));
         }
 
         [HttpPost]

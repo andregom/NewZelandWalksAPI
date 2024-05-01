@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "U+Z2fTOFYlXuI6lOq2GKOG5C8NejZfT1p2U0J04YSiEbYzDCemhz+Knqard+HNF8nIU5A4BxxcR5EB4MuO+Dgw==",
+  "dgSpecHash": "ZPbq08PW9Okocph5DVObbzRgRV8/EWp8ie3LwNbw3anAameujL06EH/5dMZN7afPnn2EDPNOPcVXIphoF/lUvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\source\\repos\\UdmNewZelandWalksAPI\\UdmNewZelandWalksAPI\\UdmNewZelandWalksAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
