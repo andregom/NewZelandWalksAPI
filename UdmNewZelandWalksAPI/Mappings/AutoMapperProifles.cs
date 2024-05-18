@@ -9,7 +9,9 @@ namespace UdmNewZelandWalksAPI.Mappings
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Region, RegionDto>();
+            CreateMap<Region, RegionDto>().ReverseMap();
+            CreateMap<AddRegionRequestDto, Region>().ReverseMap();
+            CreateMap<UpdateRegionRequestDto, Region>().ReverseMap();
         }
     }
 }
